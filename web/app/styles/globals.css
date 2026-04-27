@@ -1,79 +1,49 @@
-@import './preflight.css' layer(base);
+/* * HEXA_TECH AI - ELITE UCHIHA THEME 
+ * Created for Master Zain // Professional Edition
+ */
 
-@import '@langgenius/dify-ui/styles.css';
-@import '../../themes/manual-light.css' layer(base);
-@import '../../themes/manual-dark.css' layer(base);
-@import './monaco-sticky-fix.css' layer(base);
-
-@import '../components/base/action-button/index.css';
-@import '../components/base/badge/index.css';
-@import '../components/base/premium-badge/index.css';
-@import '../components/base/segmented-control/index.css';
-
-@import 'tailwindcss';
-
-@config '../../tailwind.config.ts';
-
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+/* 1. Main Background - Deep Dark with Subtle Sharingan Pattern */
+body {
+  background-color: #050505 !important;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+    url('https://wallpaperaccess.com/full/253303.jpg') !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  color: #e0e0e0 !important;
 }
 
-@layer components {
-  html {
-    color-scheme: light;
-  }
+/* 2. Chat Area - Glassmorphism (Text padhne mein aasaani hogi) */
+div[class*="ChatMessage_message"] {
+  background: rgba(15, 15, 15, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 0, 0, 0.2) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+}
 
-  html[data-theme='dark'] {
-    color-scheme: dark;
-  }
+/* 3. User Message Glow (Purple/Sasuke Vibe) */
+.chat-message-user {
+  border-right: 4px solid #6a0dad !important;
+  background: rgba(106, 13, 173, 0.05) !important;
+}
 
-  html[data-changing-theme] * {
-    transition: none !important;
-  }
+/* 4. AI Message Glow (Red/Sharingan Vibe) */
+.chat-message-agent {
+  border-left: 4px solid #b30000 !important;
+  background: rgba(179, 0, 0, 0.05) !important;
+}
 
-  [class*='code-'] {
-    @apply font-mono;
-  }
+/* 5. Scrollbar - Custom Slim Red */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: #b30000; border-radius: 10px; }
 
-  .text-gradient {
-    background: linear-gradient(91.58deg, #2250f2 -29.55%, #0ebcf3 75.22%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-  }
-
-  [data-theme='dark'] [data-hide-on-theme='dark'],
-  [data-theme='light'] [data-hide-on-theme='light'] {
-    display: none;
-  }
-
-  /* Shiki code block line numbers */
-  .shiki-line-numbers code {
-    counter-reset: line;
-  }
-  .shiki-line-numbers .line::before {
-    counter-increment: line;
-    content: counter(line);
-    display: inline-block;
-    width: 1rem;
-    margin-right: 0.75rem;
-    text-align: right;
-    color: var(--color-text-quaternary);
-    user-select: none;
-  }
+/* 6. Input Field - Minimalist & Sharp */
+textarea {
+  background: rgba(20, 20, 20, 0.9) !important;
+  border: 1px solid #333 !important;
+  border-top: 1px solid #b30000 !important;
+  color: #ff4d4d !important;
+  font-family: 'Inter', sans-serif !important;
 }
