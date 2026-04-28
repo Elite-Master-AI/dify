@@ -1,49 +1,31 @@
-/* * HEXA_TECH AI - ELITE UCHIHA THEME 
- * Created for Master Zain // Professional Edition
- */
+/* HEXA_TECH AI BRIGHT RED THEME */
+:root {
+  --primary-color: #FF0000;
+  --bg-dark: #0A0000;
+}
 
-/* 1. Main Background - Deep Dark with Subtle Sharingan Pattern */
 body {
-  background-color: #050505 !important;
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
-    url('https://wallpaperaccess.com/full/253303.jpg') !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
-  background-position: center !important;
-  color: #e0e0e0 !important;
+  background-color: #0A0000 !important;
+  color: #FFFFFF !important;
+  background-image: radial-gradient(circle at center, #700000 0%, #0A0000 100%) !important;
 }
 
-/* 2. Chat Area - Glassmorphism (Text padhne mein aasaani hogi) */
-div[class*="ChatMessage_message"] {
-  background: rgba(15, 15, 15, 0.7) !important;
-  backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(255, 0, 0, 0.2) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+/* User Text: Pure Bright Red */
+div[class*="ChatMessage_user"] {
+  background-color: #FF0000 !important;
+  color: white !important;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6) !important;
 }
 
-/* 3. User Message Glow (Purple/Sasuke Vibe) */
-.chat-message-user {
-  border-right: 4px solid #6a0dad !important;
-  background: rgba(106, 13, 173, 0.05) !important;
+/* Send Button: Red Glow */
+button[type="submit"] {
+  background-color: #FF0000 !important;
+  box-shadow: 0 0 20px #FF0000 !important;
 }
 
-/* 4. AI Message Glow (Red/Sharingan Vibe) */
-.chat-message-agent {
-  border-left: 4px solid #b30000 !important;
-  background: rgba(179, 0, 0, 0.05) !important;
-}
-
-/* 5. Scrollbar - Custom Slim Red */
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-thumb { background: #b30000; border-radius: 10px; }
-
-/* 6. Input Field - Minimalist & Sharp */
-textarea {
-  background: rgba(20, 20, 20, 0.9) !important;
-  border: 1px solid #333 !important;
-  border-top: 1px solid #b30000 !important;
-  color: #ff4d4d !important;
-  font-family: 'Inter', sans-serif !important;
+/* Input Border: Red */
+textarea, input {
+  border: 2px solid #FF0000 !important;
+  background-color: #100000 !important;
+  color: white !important;
 }
